@@ -33,12 +33,12 @@
 //! CREATING A LINKED_LIST USING CUSTOM CONSTRUCTOR
 #include<stdio.h>
 #include<stdlib.h>
-typedef struct node{
+typedef struct node{ // declaration of node
     int val;
     struct node *next;
 }Node;
 
-typedef struct{
+typedef struct{ 
     Node *head;
     Node *tail;
 }Link_list;
@@ -93,51 +93,7 @@ int main(){
 
 
 // ! OPERATIONS : 
-// #include<stdio.h>
-// #include<stdlib.h>
-// typedef struct node{
-//     int val;
-//     struct node *next;
-// }Node;
 
-// typedef struct{
-//     Node *head;
-//     Node *tail;
-// }Link_list;
-
-// //definition of the constructor
-// Link_list* List_constructor(){
-
-//     Link_list *chain=malloc(sizeof(Link_list));
-//     chain->head = NULL;
-//     chain->tail = NULL;
-//     printf("Enter a series of numbers : ");
-//     char line[1000];
-//     fgets(line, sizeof(line), stdin); // Read entire line
-    
-//     char *ptr = line;
-//     int n;
-    
-//     // Parse numbers from the line
-//     while(sscanf(ptr, "%d", &n) == 1){
-
-//         //creating node first
-//         Node *new_node=malloc(sizeof(Node));
-//         new_node->val = n;
-//         new_node-> next = NULL;
-        
-//         // checking and updating head & tail of the list
-//         if (chain->head == NULL){ // if list was empty
-//             chain->head=new_node;
-//             chain->tail=new_node;
-//         }
-//         else{
-//             chain->tail->next=new_node; // if list has some nodes , we need to update the next member of it
-//             chain->tail = new_node;
-//         }
-//     } 
-//     return chain;
-// }
 
 // ! Inserting a node
 // ? At the Beginning
@@ -161,6 +117,7 @@ int main(){
 // void add_middle(Link_list*l,int pos , int x){
 //     Node *new_node=malloc(sizeof(Node));
 //     Node *List_node = l->head;
+
 //     // finding the wanted_node
 //     if (pos == 0 || l->head==NULL){
 //         add_beginning(l,x);
@@ -181,7 +138,8 @@ int main(){
 // ! Searching for a node
 // Node* search(Link_list *l , int x){
 //     for (Node *curr=l->head ; curr!=NULL ; curr=curr->next){
-//         if (curr->val == x) return curr;
+//         if (curr->val == x) 
+//               return curr;
 //     }
 // }
 
