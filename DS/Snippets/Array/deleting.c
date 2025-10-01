@@ -23,7 +23,7 @@ void deleteback(int* upper_bound){
 
 //deleting from the front or from the middle 
 // btw this can work for deleting from the back too if you give position pos=upper_bound;
-//! here the pos is sequential position and not index 
+//! here the pos is the index 
 void delete(int pos , int* upper_bound){
 
     int i = pos; 
