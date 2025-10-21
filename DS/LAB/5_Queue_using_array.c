@@ -29,7 +29,7 @@ void pop() {
 
 void peek() {
     if (front==-1 || front>rear) printf("Queue empty\n");
-    else  printf("Curent top is %d\n",Queue[front]);
+    else  printf("Curent front is %d\n",Queue[front]);
 }
 
 int main(){
