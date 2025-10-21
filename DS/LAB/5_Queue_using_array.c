@@ -2,11 +2,11 @@
 # define max 5
 
 int Queue[100];
-int front,rear = -1;
+int front=-1,rear = -1;
 
 
 void push (int x){
-    if (rear-front==max) printf("Overflow\n");
+    if (rear==max-1) printf("Overflow\n");
     else if(front==-1 && rear==-1){
         front++;
         rear++;
@@ -19,15 +19,16 @@ void push (int x){
 }
 
 void pop() {
-    if (front>rear || front==-1) printf("Underflow\n");
+    if (front==-1 || front>rear) printf("Underflow\n");
     else{
         printf("Popped  %d\n",Queue[front]);
-        front++;
+        if (front==rear) front=rear=-1; // resets the queue if the very last element is popped 
+        else front++;
     }
 }
 
 void peek() {
-    if (front>rear) printf("Queue empty\n");
+    if (front==-1 || front>rear) printf("Queue empty\n");
     else  printf("Curent top is %d\n",Queue[front]);
 }
 
