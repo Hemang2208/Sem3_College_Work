@@ -39,7 +39,7 @@ class Car extends Vehicle{
 
 class main{
     public static void main(String args[]){
-        Car w11 = new Car("Mercedes" , 650);
+        Car w11 = new Car("tMercedes" , 650);
         w11.displayInfo();
         w11.shiftGear(2);
         w11.displayInfo();
