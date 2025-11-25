@@ -26,7 +26,7 @@ void push(int x){
 }
 
 void pop(){
-    if (stk.count == 0) printf("Overflow\n");
+    if (stk.count == 0) printf("Underflow\n");
     else {
         stk.top = stk.top->next;
         stk.count--;

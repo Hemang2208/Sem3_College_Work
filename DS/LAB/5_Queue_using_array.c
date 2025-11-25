@@ -5,7 +5,7 @@ int Queue[100];
 int front=-1,rear = -1;
 
 
-void push (int x){
+void enqueue (int x){
     if (rear==max-1) printf("Overflow\n");
     else if(front==-1 && rear==-1){
         front++;
@@ -18,11 +18,11 @@ void push (int x){
     }
 }
 
-void pop() {
+void dequeue() {
     if (front==-1 || front>rear) printf("Underflow\n");
     else{
-        printf("Popped  %d\n",Queue[front]);
-        if (front==rear) front=rear=-1; // resets the queue if the very last element is popped 
+        printf("dequeued  %d\n",Queue[front]);
+        if (front==rear) front=rear=-1; // resets the queue if the very last element is dequeueped 
         else front++;
     }
 }
@@ -33,19 +33,19 @@ void peek() {
 }
 
 int main(){
-    for (int i=0 ; i<5 ; i++){   // pushing elements
-        push(i+1);
+    for (int i=0 ; i<5 ; i++){   // enqueueing elements
+        enqueue(i+1);
     }
-    push(6);  // testing edge case for overflow 
+    enqueue(6);  // testing edge case for overflow 
 
     peek();
 
-    for (int i=0 ; i<5 ; i++){  // checking pop()
-       pop();
+    for (int i=0 ; i<5 ; i++){  // checking dequeue()
+       dequeue();
        peek();
     }
 
-    pop(); // testing edge case for underflow 
+    dequeue(); // testing edge case for underflow 
 
     peek();
 

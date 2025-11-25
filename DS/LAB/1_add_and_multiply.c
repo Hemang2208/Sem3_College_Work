@@ -88,7 +88,7 @@ void Multiply()
 void Add()
 {
     int rows, cols;
-    printf("Emter rows and cols : ");
+    printf("Enter rows and cols : ");
     scanf("%d%d", &rows, &cols);
     int A[rows][cols] , B[rows][cols] , C[rows][cols];
     // input of A
